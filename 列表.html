@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="./React.js/react.production.min.js"></script>
+    <script src="./React.js/react-dom.production.min.js"></script>
+    <script src="./React.js/browser.min.js"></script>
+    <script type="text/babel">
+        function List(num){
+            const number = num.numbers;
+            const listNum = number.map((nums)=>
+                <li key={nums.toString()}>{nums}</li>
+            );
+            return(
+                <ul>{listNum}</ul>
+            )
+        }
+
+        const numbers = [1, 2, 3, 4, 5];
+        ReactDOM.render(
+            <List numbers={numbers} />,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>
