@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组合组件</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="./React.js/react.production.min.js"></script>
+    <script src="./React.js/react-dom.production.min.js"></script>
+    <script src="./React.js/browser.min.js"></script>
+    <script type="text/babel">
+        function Welcome(props) {
+            return `Hello ,${props.name};` + " ";
+        }
+        //一次渲染多个组件
+        function Group() {
+            return (
+                <div>
+                    <Welcome name="Bob" />
+                    <Welcome name="Jerry" />
+                    <Welcome name="Tom" />
+                </div>
+            )
+        }
+        ReactDOM.render(
+            <Group />,
+            document.getElementById("root")
+        )
+    </script>
+</body>
+
+</html>

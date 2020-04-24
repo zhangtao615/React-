@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="./React.js/react.production.min.js"></script>
+    <script src="./React.js/react-dom.production.min.js"></script>
+    <script src="./React.js/browser.min.js"></script>
+    <script type="text/babel">//type="text/babel" 一定要写上
+        const name = 'zhangtao';
+        const element = <h1>Hello,{name}</h1>
+        ReactDOM.render(
+            element,
+            document.getElementById("root")
+        );
+    </script>
+</body>
+</html>
